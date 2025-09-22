@@ -1,0 +1,17 @@
+<programa> ::= <lista-comandos>
+
+<lista-comandos> ::= <comando> | <comando> <lista-comandos>
+
+<comando> ::= <atribuicao>
+            | <bloco>
+
+<atribuicao> ::= <id> "=" <valor> ";"
+               | <id> "=" <id> ";" 
+
+<id> ::= "x" | "y" | "z"
+
+<bloco> ::= "{" <lista-comandos> "}"
+
+<valor> ::= <digito> | <digito> <valor>
+
+<digito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"

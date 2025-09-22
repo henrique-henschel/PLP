@@ -1,0 +1,28 @@
+<programa> ::= <lista-comandos>
+
+<lista-comandos> ::= <comando> | <comando> <lista-comandos>
+
+<comando> ::= <condicional>
+            | <atribuicao>
+
+<condicional> ::= "if" "(" <expressao-booleana> ")" <atribuicao>
+                | "if" "(" <expressao-booleana> ")" <atribuicao> "else" <atribuicao>
+
+<expressao-booleana> ::= <expressao> <operador-relacional> <expressao>
+
+<atribuicao> ::= <id> "=" <expressao> ";"
+
+<id> ::= "x" | "y" | "z"
+
+<expressao> ::= <id>
+              | <valor>
+              | <expressao> <sinal> <expressao>
+              | "(" <expressao> ")"
+
+<valor> ::= <digito> | <digito> <valor>
+
+<digito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+<sinal> ::= "+" | "-" | "*" | "/"
+
+<operador-relacional> ::= "<" | "<=" | "!=" | "==" | ">=" | ">"

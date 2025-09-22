@@ -1,0 +1,26 @@
+<programa> ::= <lista-comandos>
+
+<lista-comandos> ::= <comando> | <comando> <lista-comandos>
+
+<comando> ::= <estrutura-condicional>
+
+<estrutura-condicional> ::= "if" "(" <expressao-bool> ")" <atribuicao>
+
+<expressao-bool> ::= <expressao> <operador-rel> <expressao>
+
+<operador-rel> ::= "<" | ">" | "==" | "<=" | ">=" | "!=="
+
+<atribuicao> ::= <id> "=" <expressao> ";"
+
+<id> ::= "x" | "y" | "z"
+
+<expressao> ::= <id>
+              | <valor>
+              | <expressao> <sinal> <expressao>
+              | "(" <expressao> ")"
+
+<valor> ::= <digito> | <digito> <valor>
+
+<digito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+<sinal> ::= "+" | "-" | "*" | "/"

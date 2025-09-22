@@ -1,0 +1,34 @@
+<codigo-fonte> ::= <conjunto-instrucoes>
+
+<conjunto-instrucoes> ::= <instrucao> | <instrucao> <conjunto-instrucoes>
+
+<instrucao> ::= <atribuicao>
+              | <estrutura-condicional>
+              | <estrutura-repeticao>
+              | <bloco>
+
+<atribuicao> ::= <id> "=" <expressao> ";"
+
+<id> ::= "x" | "y" | "z"
+
+<digito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+<valor> ::= <digito> | <digito> <valor>
+
+<operador-aritmetico> ::= "+" | "-" | "*" | "/"
+
+<operador-comparativo> ::= "<" | "<=" | "!=" | "==" | ">=" | ">"
+
+<expressao> ::= <id>
+              | <valor>
+              | <expressao> <operador-aritmetico> <expressao>
+              | "(" <expressao> ")"
+
+<expressao-booleana> ::= <expressao> <operador-comparativo> <expressao>
+
+<estrutura-condicional> ::= "if" "(" <expressao-booleana> ")" <atribuicao>
+                          | "if" "(" <expressao-booleana> ")" <atribuicao> "else" <atribuicao>
+
+<estrutura-repeticao> ::= "while" "(" <expressao-booleana> ")" <bloco>
+
+<bloco> ::= "{" <conjunto-instrucoes> "}"

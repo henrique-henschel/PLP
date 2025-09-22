@@ -1,0 +1,19 @@
+<programa> ::= <lista-comandos>
+
+<lista-comandos> ::= <comando> | <comando> <lista-comandos>
+
+<comando> ::= <atribuicao>
+
+<atribuicao> ::= <id> "=" <expressao> ";"
+
+<id> ::= "x" | "y" | "z"
+
+<expressao> ::= <id>
+              | <valor>
+              | <expressao> <sinal> <expressao>
+
+<valor> ::= <digito> | <digito> <valor>
+
+<digito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+<sinal> ::= "+" | "*"

@@ -1,0 +1,28 @@
+<codigo-fonte> ::= <conjunto-instrucoes>
+
+<conjunto-instrucoes> ::= <instrucao> | <instrucao> <conjunto-instrucoes>
+
+<instrucao> ::= <atribuicao> | <laco-repeticao>
+
+<atribuicao> ::= <id> "=" <expressao> ";"
+
+<laco-repeticao> ::= "while" "(" <expressao-booleana> ")" <bloco>
+
+<expressao-booleana> ::= <expressao> <operador-relacional> <expressao>
+
+<bloco> ::= "{" <conjunto-instrucoes> "}"
+
+<id> ::= "x" | "y" | "z"
+
+<expressao> ::= <id> 
+              | <valor>
+              | <expressao> <operador-aritmetico> <expressao>
+              | "(" <expressao> ")"
+
+<valor> ::= <digito> | <digito> <valor>
+
+<digito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+<operador-aritmetico> ::= "+" | "-" | "*" | "/"
+
+<operador-relacional> ::= "<" | "<=" | "<>" | "==" | ">=" | ">="
